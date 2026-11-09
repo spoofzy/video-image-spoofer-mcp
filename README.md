@@ -39,14 +39,14 @@ Keep keys out of chats, prompts and repositories. The steps below store them out
 In Claude Code:
 
 ```text
-/plugin marketplace add spoofzy/spoofzy
+/plugin marketplace add spoofzy/video-image-spoofer-mcp
 /plugin install spoofzy@spoofzy
 ```
 
 Or from a terminal:
 
 ```bash
-claude plugin marketplace add spoofzy/spoofzy
+claude plugin marketplace add spoofzy/video-image-spoofer-mcp
 ```
 
 ```bash
@@ -59,7 +59,7 @@ uses it automatically when you ask to spoof media.
 ### Claude Code (MCP server only)
 
 ```bash
-curl -fsSLo ~/spoofzy_mcp.py https://raw.githubusercontent.com/spoofzy/spoofzy/main/spoofzy_mcp.py
+curl -fsSLo ~/spoofzy_mcp.py https://raw.githubusercontent.com/spoofzy/video-image-spoofer-mcp/main/spoofzy_mcp.py
 ```
 
 ```bash
@@ -68,7 +68,7 @@ claude mcp add spoofzy --scope user --env SPOOFZY_WAIT_SECONDS=600 -- python3 ~/
 
 ### Claude Desktop
 
-Download `spoofzy-<version>.mcpb` from [Releases](https://github.com/spoofzy/spoofzy/releases) and open it. Claude
+Download `spoofzy-<version>.mcpb` from [Releases](https://github.com/spoofzy/video-image-spoofer-mcp/releases) and open it. Claude
 Desktop asks for your key and stores it in the system keychain. Python 3.9+ must be installed. macOS includes it
 with the Xcode Command Line Tools.
 
@@ -94,7 +94,7 @@ Any client that runs stdio servers works. With [uv](https://docs.astral.sh/uv/) 
   "mcpServers": {
     "spoofzy": {
       "command": "uvx",
-      "args": ["--from", "git+https://github.com/spoofzy/spoofzy", "spoofzy-mcp"]
+      "args": ["--from", "git+https://github.com/spoofzy/video-image-spoofer-mcp", "spoofzy-mcp"]
     }
   }
 }
@@ -113,7 +113,7 @@ python3 ~/spoofzy_mcp.py setup
 ```
 
 Plugin users can run setup from any copy of the script (the curl command above downloads one) or with
-`uvx --from git+https://github.com/spoofzy/spoofzy spoofzy-mcp setup`. You can also set environment variables
+`uvx --from git+https://github.com/spoofzy/video-image-spoofer-mcp spoofzy-mcp setup`. You can also set environment variables
 instead: `SPOOFZY_CLOUD_API_KEY` and/or `SPOOFZY_API_KEY`. Check everything with:
 
 ```bash

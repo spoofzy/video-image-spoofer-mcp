@@ -3,7 +3,7 @@
 ## Reporting a vulnerability
 
 Please report security problems privately through GitHub's
-[private vulnerability reporting](https://github.com/spoofzy/spoofzy/security/advisories/new)
+[private vulnerability reporting](https://github.com/spoofzy/video-image-spoofer-mcp/security/advisories/new)
 (Security → Report a vulnerability), not in a public issue. Include steps to
 reproduce and the version (`python3 spoofzy_mcp.py --version`).
 

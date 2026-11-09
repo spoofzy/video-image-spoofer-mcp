@@ -8,7 +8,7 @@
     "url": "https://spoofzy.com"
   },
   "homepage": "https://spoofzy.com",
-  "repository": "https://github.com/spoofzy/spoofzy",
+  "repository": "https://github.com/spoofzy/video-image-spoofer-mcp",
   "license": "MIT",
   "keywords": ["spoofzy", "spoofer", "image", "video", "metadata", "mcp"],
   "mcpServers": {

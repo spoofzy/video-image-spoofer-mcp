@@ -64,7 +64,7 @@ MAX_MESSAGE_BYTES = 4 * 1024 * 1024
 
 DEFAULT_CLOUD_URL = "https://cloud.spoofzy.com/developer/v1"
 DEFAULT_API_URL = "https://api.spoofzy.com/api/v1"
-USER_AGENT = "spoofzy-mcp/{} (+https://github.com/spoofzy/spoofzy)".format(__version__)
+USER_AGENT = "spoofzy-mcp/{} (+https://github.com/spoofzy/video-image-spoofer-mcp)".format(__version__)
 CLOUD_KEY_RE = re.compile(r"spc_[a-f0-9]{32}\.[A-Za-z0-9_-]{43}")
 API_KEY_RE = re.compile(r"spz_([0-9]+)_[A-Za-z0-9_-]{24,}")
 RUN_ID_RE = re.compile(r"(?:mjob|cc|api|batch)_[a-f0-9]{32}")

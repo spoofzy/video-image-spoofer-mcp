@@ -10,11 +10,11 @@
     "url": "https://spoofzy.com"
   },
   "homepage": "https://spoofzy.com",
-  "documentation": "https://github.com/spoofzy/spoofzy#readme",
-  "support": "https://github.com/spoofzy/spoofzy/issues",
+  "documentation": "https://github.com/spoofzy/video-image-spoofer-mcp#readme",
+  "support": "https://github.com/spoofzy/video-image-spoofer-mcp/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/spoofzy/spoofzy"
+    "url": "https://github.com/spoofzy/video-image-spoofer-mcp"
   },
   "icon": "assets/icon.png",
   "server": {

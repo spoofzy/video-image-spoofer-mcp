@@ -21,8 +21,8 @@ dependencies = []
 
 [project.urls]
 Homepage = "https://spoofzy.com"
-Repository = "https://github.com/spoofzy/spoofzy"
-Issues = "https://github.com/spoofzy/spoofzy/issues"
+Repository = "https://github.com/spoofzy/video-image-spoofer-mcp"
+Issues = "https://github.com/spoofzy/video-image-spoofer-mcp/issues"
 
 [project.scripts]
 spoofzy-mcp = "spoofzy_mcp:main"
