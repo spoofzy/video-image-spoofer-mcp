@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spoofzy-mcp"
+version = "1.0.0"
+description = "Spoofzy MCP server and Claude skill: spoof images and videos, strip metadata and run Spoofzy Cloud workflows from Claude and other MCP clients."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Spoofzy"}]
+keywords = ["spoofzy", "mcp", "model-context-protocol", "claude", "image", "video", "metadata"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://spoofzy.com"
+Repository = "https://github.com/spoofzy/spoofzy"
+Issues = "https://github.com/spoofzy/spoofzy/issues"
+
+[project.scripts]
+spoofzy-mcp = "spoofzy_mcp:main"
+
+[tool.setuptools]
+py-modules = ["spoofzy_mcp"]

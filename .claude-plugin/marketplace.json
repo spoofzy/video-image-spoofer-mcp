@@ -1,0 +1,17 @@
+{
+  "name": "spoofzy",
+  "owner": {
+    "name": "Spoofzy",
+    "url": "https://spoofzy.com"
+  },
+  "description": "Official Spoofzy plugins for Claude Code.",
+  "plugins": [
+    {
+      "name": "spoofzy",
+      "source": "./",
+      "description": "Spoof images and videos with Spoofzy: make unique versions, strip metadata and run Spoofzy Cloud workflows.",
+      "version": "1.0.0",
+      "tags": ["images", "video", "media", "mcp"]
+    }
+  ]
+}

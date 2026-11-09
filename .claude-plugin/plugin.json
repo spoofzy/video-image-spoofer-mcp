@@ -1,0 +1,26 @@
+{
+  "name": "spoofzy",
+  "displayName": "Spoofzy",
+  "version": "1.0.0",
+  "description": "Spoof images and videos with Spoofzy from Claude: make unique versions, strip photo and video metadata, and run saved Spoofzy Cloud workflows. Includes the Spoofzy MCP server and skill.",
+  "author": {
+    "name": "Spoofzy",
+    "url": "https://spoofzy.com"
+  },
+  "homepage": "https://spoofzy.com",
+  "repository": "https://github.com/spoofzy/spoofzy",
+  "license": "MIT",
+  "keywords": ["spoofzy", "spoofer", "image", "video", "metadata", "mcp"],
+  "mcpServers": {
+    "spoofzy": {
+      "command": "python3",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/spoofzy_mcp.py"],
+      "env": {
+        "SPOOFZY_CLOUD_API_KEY": "${SPOOFZY_CLOUD_API_KEY:-}",
+        "SPOOFZY_API_KEY": "${SPOOFZY_API_KEY:-}",
+        "SPOOFZY_OUTPUT_DIR": "${SPOOFZY_OUTPUT_DIR:-}",
+        "SPOOFZY_WAIT_SECONDS": "${SPOOFZY_WAIT_SECONDS:-600}"
+      }
+    }
+  }
+}

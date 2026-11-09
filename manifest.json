@@ -1,0 +1,79 @@
+{
+  "manifest_version": "0.3",
+  "name": "spoofzy",
+  "display_name": "Spoofzy",
+  "version": "1.0.0",
+  "description": "Spoof images and videos with Spoofzy: make unique versions, strip metadata and run Spoofzy Cloud workflows.",
+  "long_description": "Connect Claude to your Spoofzy account. Ask for unique versions of local photos and videos (1 to 50 per file), remove hidden metadata such as GPS location, device details and capture dates, or run your saved Spoofzy Cloud workflows. Results are saved next to the originals in a spoofzy-output folder, and existing files are never overwritten. Works with a Spoofzy Cloud API key (Cloud → Developers) or a prepaid Spoofer API key (/api in the Spoofzy Telegram bot). Requires Python 3.9 or later; no other dependencies.",
+  "author": {
+    "name": "Spoofzy",
+    "url": "https://spoofzy.com"
+  },
+  "homepage": "https://spoofzy.com",
+  "documentation": "https://github.com/spoofzy/spoofzy#readme",
+  "support": "https://github.com/spoofzy/spoofzy/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spoofzy/spoofzy"
+  },
+  "icon": "assets/icon.png",
+  "server": {
+    "type": "python",
+    "entry_point": "spoofzy_mcp.py",
+    "mcp_config": {
+      "command": "python3",
+      "args": ["${__dirname}/spoofzy_mcp.py"],
+      "env": {
+        "SPOOFZY_CLOUD_API_KEY": "${user_config.cloud_api_key}",
+        "SPOOFZY_API_KEY": "${user_config.spoofer_api_key}",
+        "SPOOFZY_OUTPUT_DIR": "${user_config.output_dir}"
+      },
+      "platform_overrides": {
+        "win32": {
+          "command": "python"
+        }
+      }
+    }
+  },
+  "tools": [
+    {"name": "spoofzy_account", "description": "Check the Spoofzy connection, plan, tools, costs and limits."},
+    {"name": "spoofzy_spoof", "description": "Make unique versions of local images or videos and save them."},
+    {"name": "spoofzy_clean_metadata", "description": "Strip GPS, device and date metadata from photos or videos."},
+    {"name": "spoofzy_get_run", "description": "Check a Spoofzy run and wait for it to finish."},
+    {"name": "spoofzy_download", "description": "Save the results of a finished Spoofzy run."},
+    {"name": "spoofzy_list_runs", "description": "List recent Spoofzy runs."},
+    {"name": "spoofzy_list_workflows", "description": "List saved Spoofzy Cloud workflows."},
+    {"name": "spoofzy_run_workflow", "description": "Run a saved Spoofzy Cloud workflow on local files."},
+    {"name": "spoofzy_list_saved_originals", "description": "List originals saved in the Spoofzy library."}
+  ],
+  "user_config": {
+    "cloud_api_key": {
+      "type": "string",
+      "title": "Spoofzy Cloud API key",
+      "description": "Starts with spc_. Create one in Spoofzy Cloud → Developers with 'Read jobs and results' and 'Upload and run processing' (add workflow permissions for workflows). Leave empty if you only use a prepaid Spoofer API key.",
+      "sensitive": true,
+      "required": false
+    },
+    "spoofer_api_key": {
+      "type": "string",
+      "title": "Prepaid Spoofer API key (optional)",
+      "description": "Starts with spz_. From /api in the Spoofzy Telegram bot.",
+      "sensitive": true,
+      "required": false
+    },
+    "output_dir": {
+      "type": "directory",
+      "title": "Output folder (optional)",
+      "description": "Where results are saved. Leave empty to save them in a spoofzy-output folder next to each original.",
+      "required": false
+    }
+  },
+  "compatibility": {
+    "platforms": ["darwin", "win32", "linux"],
+    "runtimes": {
+      "python": ">=3.9"
+    }
+  },
+  "keywords": ["spoofzy", "spoofer", "image", "video", "metadata"],
+  "license": "MIT"
+}
