@@ -1,4 +1,4 @@
-# Spoofzy for Claude: MCP server and skill
+# Video and Image Spoofer for Claude: Spoofzy MCP server and skill
 
 Spoof images and videos with [Spoofzy](https://spoofzy.com) from Claude Code, Claude Desktop or any other
 [Model Context Protocol](https://modelcontextprotocol.io) client. Ask Claude for unique versions of your photos and
